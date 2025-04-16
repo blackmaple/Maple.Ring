@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35806.103
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maple.Ring.Windows", "Maple.Ring.Windows\Maple.Ring.Windows.csproj", "{838C5881-73B5-42B4-B606-4E25886F795F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maple.Ring.Metadata", "Maple.Ring.Metadata\Maple.Ring.Metadata.csproj", "{9AB90A3A-C964-41ED-B6F7-D69EA4CC9EAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{838C5881-73B5-42B4-B606-4E25886F795F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838C5881-73B5-42B4-B606-4E25886F795F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838C5881-73B5-42B4-B606-4E25886F795F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838C5881-73B5-42B4-B606-4E25886F795F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB90A3A-C964-41ED-B6F7-D69EA4CC9EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB90A3A-C964-41ED-B6F7-D69EA4CC9EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB90A3A-C964-41ED-B6F7-D69EA4CC9EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB90A3A-C964-41ED-B6F7-D69EA4CC9EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EE3BFA1-FD30-4538-9AD5-635437D6FFB3}
+	EndGlobalSection
+EndGlobal
