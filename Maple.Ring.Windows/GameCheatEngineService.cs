@@ -40,6 +40,9 @@ namespace Maple.Ring.Windows
 
         private void LoadGameMetadata()
         {
+            var resource = new GameReourceCache(this.Context);
+            resource.LoadResource();
+            return;
             foreach (var image in this.Context.ImageNames)
             {
                 if (!image.Utf8Name.AsSpan().StartsWith("Assembly-CSharp"u8))
