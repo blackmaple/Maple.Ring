@@ -2,6 +2,7 @@
 using Maple.MonoGameAssistant.GameDTO;
 using Maple.MonoGameAssistant.MetadataExtensions.MetadataCollector;
 using Microsoft.Extensions.Logging;
+using System.Runtime.CompilerServices;
 
 namespace Maple.Ring.Metadata
 {
@@ -9,7 +10,7 @@ namespace Maple.Ring.Metadata
     {
         GameReourceCache ReourceCache { get; } = reourceCache;
         GameMetadataContext MetadataContext => ReourceCache.MetadataContext;
-
+        CharacterManager.Ptr_CharacterManager Ptr_CharacterManager { get; } = CharacterManager.Ptr_CharacterManager.INSTANCE;
 
 
         public static GameCheatEngine CreateThrowIfNotInGame(GameReourceCache gameReourceCache)
@@ -27,12 +28,10 @@ namespace Maple.Ring.Metadata
 
         static GameCharacterDisplayDTO GetCharacterData(Character.Ptr_Character ptr_Character)
         {
-           
-
             return new GameCharacterDisplayDTO()
             {
                 ObjectId = ptr_Character.RACE.ToString(),
-               DisplayName = ptr_Character.NICKNAME.Value.GET_VALUE().DOI18N().ToString(),
+                DisplayName = ptr_Character.NICKNAME.Value.GET_VALUE().DOI18N().ToString(),
                 DisplayCategory = ptr_Character.RACE.ToString(),
                 DisplayDesc = string.Empty,
 
@@ -41,11 +40,8 @@ namespace Maple.Ring.Metadata
 
         public IEnumerable<GameCharacterDisplayDTO> GetGameCharacters()
         {
-            var characterMgr = CharacterManager.Ptr_CharacterManager.INSTANCE;
-            if (characterMgr.IsNull())
-            {
-                yield break;
-            }
+            var characterMgr = this.Ptr_CharacterManager;
+ 
             var master = characterMgr.MASTER;
             var masterCharacter = master.Value;
             this.MetadataContext.Logger.LogInformation("master:{p}/character:{pp}", master.Ptr.ToString("X8"), masterCharacter.Ptr.ToString("X8"));
@@ -63,7 +59,32 @@ namespace Maple.Ring.Metadata
             }
         }
 
+        private GameCharacterStatusDTO GetGameCharacterStatusImp(Character.Ptr_Character ptr_Character)
+        { 
+        
+        }
+        public GameCharacterStatusDTO GetGameCharacterStatus(GameCharacterObjectDTO characterObjectDTO)
+        {
+            if (!Enum.TryParse<Race>(characterObjectDTO.CharacterCategory, out var characterCategory))
+            {
+                return GameException.Throw<GameCharacterStatusDTO>($"NOT FOUND:{characterObjectDTO.CharacterCategory}");
+            }
 
+            var characterMgr = this.Ptr_CharacterManager;
+           
+            var master = characterMgr.MASTER;
+            var masterCharacter = master.Value;
+            if (masterCharacter.IsNotNull() && masterCharacter.RACE == characterCategory)
+            {
+                return GetGameCharacterStatusImp(masterCharacter);
+            }
+            var player = characterMgr.PLAYER;
+            var playerCharacter = player.Value;
+            if (playerCharacter.IsNotNull() && playerCharacter.RACE == characterCategory)
+            {
+                return GetGameCharacterStatusImp(playerCharacter);
+            }
+        }
 
     }
 
