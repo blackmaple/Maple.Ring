@@ -18,7 +18,7 @@ namespace Maple.Ring.Metadata
 
             public static implicit operator Ptr_CharacterManager(System.IntPtr ptr) => new Ptr_CharacterManager(ptr);
             public static implicit operator System.IntPtr(Ptr_CharacterManager ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_CharacterManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_CharacterManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -31,49 +31,49 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint COLLECTED_CHARACTER_GAME_OBJECT_NAME = CollectedCharacter; 
+            /*
+           public const nint COLLECTED_CHARACTER_GAME_OBJECT_NAME = CollectedCharacter; 
 */
             /// <summary>
             /// 0x0 System.Int32 emptyActorId
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            public const System.Int32 EMPTY_ACTOR_ID = 0; 
+            /*
+           public const System.Int32 EMPTY_ACTOR_ID = 0; 
 */
             /// <summary>
             /// 0x0 System.String characterPrefabName
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint CHARACTER_PREFAB_NAME = CharacterAgent; 
+            /*
+           public const nint CHARACTER_PREFAB_NAME = CharacterAgent; 
 */
             /// <summary>
             /// 0x0 System.String objectIsNullMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
+            /*
+           public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
 */
             /// <summary>
             /// 0x0 System.String cloneDestroyedMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
+            /*
+           public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
 */
             /// <summary>
             /// 0x0 System.Int32 <MasterCharacterId>k__BackingField
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MasterCharacterId>k__BackingField", "System.Int32")]
-            public static partial System.Int32 MASTER_CHARACTER_ID { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MasterCharacterId>k__BackingField", "System.Int32")]
+           public static partial System.Int32 MASTER_CHARACTER_ID { get; set; } 
 */
 
             /// <summary>
@@ -81,19 +81,19 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll".""."CharacterManager"]
             /// </summary>
             /// <returns>class CharacterManager</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("instance", "CharacterManager")]
-            public static partial nint INSTANCE { get; set; } 
-*/
+            public static partial CharacterManager.Ptr_CharacterManager INSTANCE { get; set; }
+
 
             /// <summary>
             /// 0x0 System.Int32 OffsetOfInstanceIDInCPlusPlusObject
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
-            public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
+           public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
 */
 
             /// <summary>
@@ -101,9 +101,9 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System"."Object"]
             /// </summary>
             /// <returns>class System.Object</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Lock", "System.Object")]
-            public static partial nint LOCK { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Lock", "System.Object")]
+           public static partial nint LOCK { get; set; } 
 */
 
             /// <summary>
@@ -111,9 +111,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Boolean"]
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ApplicationIsQuitting", "System.Boolean")]
-            public static partial System.Boolean APPLICATION_IS_QUITTING { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ApplicationIsQuitting", "System.Boolean")]
+           public static partial System.Boolean APPLICATION_IS_QUITTING { get; set; } 
 */
 
             /// <summary>
@@ -121,9 +121,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."IntPtr"]
             /// </summary>
             /// <returns>struct System.IntPtr</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
-            public partial System.IntPtr M_CACHED_PTR { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
+           public partial System.IntPtr M_CACHED_PTR { get; set; } 
 */
 
             /// <summary>
@@ -131,9 +131,9 @@ namespace Maple.Ring.Metadata
             /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."GameObject"]
             /// </summary>
             /// <returns>class UnityEngine.GameObject</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("characterPrefab", "UnityEngine.GameObject")]
-            public partial nint CHARACTER_PREFAB { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("characterPrefab", "UnityEngine.GameObject")]
+           public partial nint CHARACTER_PREFAB { get; set; } 
 */
 
             /// <summary>
@@ -141,9 +141,9 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System.Collections.Concurrent"."ConcurrentQueue`1"]
             /// </summary>
             /// <returns>class System.Collections.Concurrent.ConcurrentQueue<Character></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("cache", "System.Collections.Concurrent.ConcurrentQueue<Character>")]
-            public partial nint CACHE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("cache", "System.Collections.Concurrent.ConcurrentQueue<Character>")]
+           public partial nint CACHE { get; set; } 
 */
 
             /// <summary>
@@ -151,9 +151,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveDictionary`2"]
             /// </summary>
             /// <returns>class UniRx.ReactiveDictionary<System.Int32 , Character></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("actors", "UniRx.ReactiveDictionary<System.Int32,Character>")]
-            public partial nint ACTORS { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("actors", "UniRx.ReactiveDictionary<System.Int32,Character>")]
+           public partial nint ACTORS { get; set; } 
 */
 
             /// <summary>
@@ -161,19 +161,19 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveProperty<Character></returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("master", "UniRx.ReactiveProperty<Character>")]
-            public partial nint MASTER { get; set; } 
-*/
+            public partial PtrReactiveProperty<Character.Ptr_Character> MASTER { get; set; }
+
 
             /// <summary>
             /// 0x38 UniRx.ReadOnlyReactiveProperty<Character> ObservableMaster
             /// class ["UniRx.dll"."UniRx"."ReadOnlyReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReadOnlyReactiveProperty<Character></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ObservableMaster", "UniRx.ReadOnlyReactiveProperty<Character>")]
-            public partial nint OBSERVABLE_MASTER { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ObservableMaster", "UniRx.ReadOnlyReactiveProperty<Character>")]
+           public partial nint OBSERVABLE_MASTER { get; set; } 
 */
 
             /// <summary>
@@ -181,19 +181,19 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveProperty<Character></returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("player", "UniRx.ReactiveProperty<Character>")]
-            public partial nint PLAYER { get; set; } 
-*/
+            public partial PtrReactiveProperty<Character.Ptr_Character> PLAYER { get; set; }
+
 
             /// <summary>
             /// 0x48 UniRx.ReadOnlyReactiveProperty<Character> ObservablePlayer
             /// class ["UniRx.dll"."UniRx"."ReadOnlyReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReadOnlyReactiveProperty<Character></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ObservablePlayer", "UniRx.ReadOnlyReactiveProperty<Character>")]
-            public partial nint OBSERVABLE_PLAYER { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ObservablePlayer", "UniRx.ReadOnlyReactiveProperty<Character>")]
+           public partial nint OBSERVABLE_PLAYER { get; set; } 
 */
 
             /// <summary>
@@ -201,9 +201,9 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<Save.CharacterSaveData></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("masterHistory", "System.Collections.Generic.List<Save.CharacterSaveData>")]
-            public partial nint MASTER_HISTORY { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("masterHistory", "System.Collections.Generic.List<Save.CharacterSaveData>")]
+           public partial nint MASTER_HISTORY { get; set; } 
 */
         }
 

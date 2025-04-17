@@ -13,31 +13,24 @@ namespace Maple.Ring.Metadata
         public GameMetadataContext MetadataContext { get; }
         ILogger Logger => this.MetadataContext.Logger;
 
-        public List<GameInventoryDisplayDTOEX> Items { get; } = new List<GameInventoryDisplayDTOEX>(1024);
-        public List<GameSkillDisplayDTOEX> Skills { get; } = new List<GameSkillDisplayDTOEX>(1024);
-        public List<GameMonsterDisplayDTOEX> Monsters { get; } = new List<GameMonsterDisplayDTOEX>(1024);
-        public List<GameValueInfoDTOEX> Dicts { get; } = new List<GameValueInfoDTOEX>(1024);
-        public List<GameValueInfoDTOEX> Elements { get; } = new List<GameValueInfoDTOEX>(1024);
+        public GameInventoryDisplayDTOEX[] Items { get; } 
+        public GameSkillDisplayDTOEX[] Skills { get; }
+        public GameMonsterDisplayDTOEX[] Monsters { get; } 
+        public GameValueInfoDTOEX[] Dicts { get; } 
+        public GameValueInfoDTOEX[] Elements { get; }
 
 
         public GameReourceCache(GameMetadataContext metadataContext)
         {
             this.MetadataContext = metadataContext;
 
-
+            this.Items= [..LoadItemDatas()];
+            this.Skills = [.. LoadSkillDatas()];
+            this.Monsters = [.. LoadMonsterDatas()];
+            this.Elements = [.. LoadElementDatas()];
+            this.Dicts = [.. LoadDictDatas()];
         }
 
-
-        public void LoadResource()
-        {
-            this.Items.AddRange(LoadItemDatas());
-            this.Skills.AddRange(LoadSkillDatas());
-            this.Monsters.AddRange(LoadMonsterDatas());
-            this.Elements.AddRange(LoadElementDatas());
-
-
-            this.Dicts.AddRange(LoadDictDatas());
-        }
 
         IEnumerable<GameInventoryDisplayDTOEX> LoadItemDatas()
         {
@@ -152,6 +145,12 @@ namespace Maple.Ring.Metadata
                     yield return dto;
                 }
             }
+        }
+
+
+        public static bool InGame()
+        {
+          return  GameManager.Ptr_GameManager.INSTANCE.GAME_STATE.STATE != StateType.StandBy;
         }
 
     }

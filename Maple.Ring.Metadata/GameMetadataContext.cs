@@ -11,10 +11,14 @@ namespace Maple.Ring.Metadata
 
     [ContextMemberMetadata<I18nTextProvider>]
 
+    [ContextMemberMetadata<GameManager>]
+    [ContextMemberMetadata<GameState>]
+
+
     [ContextMemberMetadata<InventoryItemSet>]
     [ContextMemberMetadata<InventoryManager>]
 
-
+    [ContextMemberMetadata<GameSystemConfig>]
 
     [ContextMemberMetadata<DataAssetManager>]
     [ContextMemberMetadata<AlchemyGrowthConfigData>]
@@ -78,6 +82,18 @@ namespace Maple.Ring.Metadata
     [ContextMemberMetadata<TechnologyLevelConfigDataManager>]
 
 
+    [ContextMemberMetadata<CharacterManager>]
+    [ContextMemberMetadata<Character>]
+    [ContextMemberMetadata<CharacterName>]
+
+    [ContextMemberMetadata<FloatReactiveProperty>]
+    [ContextMemberMetadata<AvatarData>]
+    [ContextMemberMetadata<AlchemyPresenter>]
+    [ContextMemberMetadata<ForgePresenter>]
+    [ContextMemberMetadata<CharacterSectPresenter>]
+    [ContextMemberMetadata<CharacterReputationManager>]
+    [ContextMemberMetadata<Personality>]
+
     public partial class GameMetadataContext
     {
 
@@ -87,5 +103,4 @@ namespace Maple.Ring.Metadata
 
         //DataAssetManager
     }
-
 }

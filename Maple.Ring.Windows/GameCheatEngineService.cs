@@ -33,16 +33,15 @@ namespace Maple.Ring.Windows
 
         }
 
+        public required GameReourceCache Cache { get; set; }
+
         protected override async ValueTask LoadGameDataAsync()
         {
-            await this.MonoTaskAsync(static (p, @this) => @this.LoadGameMetadata(), this).ConfigureAwait(false);
+            this.Cache = await this.MonoTaskAsync(static (p) => new GameReourceCache(p)).ConfigureAwait(false);
         }
 
         private void LoadGameMetadata()
         {
-            var resource = new GameReourceCache(this.Context);
-            resource.LoadResource();
-            return;
             foreach (var image in this.Context.ImageNames)
             {
                 if (!image.Utf8Name.AsSpan().StartsWith("Assembly-CSharp"u8))
@@ -78,6 +77,33 @@ namespace Maple.Ring.Windows
         {
             throw new NotImplementedException();
         }
+
+
+        public Task<GameCheatEngine> GetGameCheatEngine() => this.MonoTaskAsync((p, cache) => GameCheatEngine.Create(cache), this.Cache);
+        public Task<GameCheatEngine> GetGameCheatEngineThrowIfNotInGame() => this.MonoTaskAsync((p, cache) => GameCheatEngine.CreateThrowIfNotInGame(cache), this.Cache);
+
+
+        public sealed override async ValueTask<GameCharacterDisplayDTO[]> GetListCharacterDisplayAsync()
+        {
+            var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
+            return await this.MonoTaskAsync((p, c) => cheatengine.GetGameCharacters().ToArray(), cheatengine).ConfigureAwait(false);
+
+        }
+
+
+        public sealed override ValueTask<GameInventoryDisplayDTO[]> GetListInventoryDisplayAsync()
+        {
+            return new ValueTask<GameInventoryDisplayDTO[]>(this.Cache.Items);
+        }
+        public sealed override ValueTask<GameMonsterDisplayDTO[]> GetListMonsterDisplayAsync()
+        {
+            return new ValueTask<GameMonsterDisplayDTO[]>(this.Cache.Monsters);
+        }
+        public sealed override ValueTask<GameSkillDisplayDTO[]> GetListSkillDisplayAsync()
+        {
+            return new ValueTask<GameSkillDisplayDTO[]>(this.Cache.Skills);
+        }
+
     }
 
 }
