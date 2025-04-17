@@ -18,7 +18,7 @@ namespace Maple.Ring.Metadata
 
             public static implicit operator Ptr_Character(System.IntPtr ptr) => new Ptr_Character(ptr);
             public static implicit operator System.IntPtr(Ptr_Character ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_Character ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_Character ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -31,25 +31,25 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
+            /*
+           public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
 */
             /// <summary>
             /// 0x0 System.String cloneDestroyedMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
+            /*
+           public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
 */
             /// <summary>
             /// 0x0 System.Int32 OffsetOfInstanceIDInCPlusPlusObject
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
-            public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
+           public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
 */
 
             /// <summary>
@@ -57,9 +57,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."IntPtr"]
             /// </summary>
             /// <returns>struct System.IntPtr</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
-            public partial System.IntPtr M_CACHED_PTR { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
+           public partial System.IntPtr M_CACHED_PTR { get; set; } 
 */
 
             /// <summary>
@@ -67,9 +67,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveProperty<CharacterName></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("nickname", "UniRx.ReactiveProperty<CharacterName>")]
-            public partial nint NICKNAME { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("nickname", "UniRx.ReactiveProperty<CharacterName>")]
+           public partial nint NICKNAME { get; set; } 
 */
 
             /// <summary>
@@ -77,9 +77,9 @@ namespace Maple.Ring.Metadata
             /// enum ["Assembly-CSharp.dll".""."Race"]
             /// </summary>
             /// <returns>enum Race</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("race", "Race")]
-            public partial Race RACE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("race", "Race")]
+           public partial Race RACE { get; set; } 
 */
 
             /// <summary>
@@ -87,9 +87,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveProperty<DataAsset.LevelAttributeConfigData></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("LevelAttribute", "UniRx.ReactiveProperty<DataAsset.LevelAttributeConfigData>")]
-            public partial nint LEVEL_ATTRIBUTE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("LevelAttribute", "UniRx.ReactiveProperty<DataAsset.LevelAttributeConfigData>")]
+           public partial nint LEVEL_ATTRIBUTE { get; set; } 
 */
 
             /// <summary>
@@ -97,9 +97,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveProperty<Sex></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("sex", "UniRx.ReactiveProperty<Sex>")]
-            public partial nint SEX { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("sex", "UniRx.ReactiveProperty<Sex>")]
+           public partial nint SEX { get; set; } 
 */
 
             /// <summary>
@@ -107,9 +107,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("age", "System.Int32")]
-            public partial System.Int32 AGE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("age", "System.Int32")]
+           public partial System.Int32 AGE { get; set; } 
 */
 
             /// <summary>
@@ -117,9 +117,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalMaxAge", "System.Int32")]
-            public partial System.Int32 ADDITIONAL_MAX_AGE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalMaxAge", "System.Int32")]
+           public partial System.Int32 ADDITIONAL_MAX_AGE { get; set; } 
 */
 
             /// <summary>
@@ -127,9 +127,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalAttack", "System.Single")]
-            public partial System.Single ADDITIONAL_ATTACK { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalAttack", "System.Single")]
+           public partial System.Single ADDITIONAL_ATTACK { get; set; } 
 */
 
             /// <summary>
@@ -137,9 +137,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalDefense", "System.Single")]
-            public partial System.Single ADDITIONAL_DEFENSE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalDefense", "System.Single")]
+           public partial System.Single ADDITIONAL_DEFENSE { get; set; } 
 */
 
             /// <summary>
@@ -147,9 +147,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalSpeed", "System.Single")]
-            public partial System.Single ADDITIONAL_SPEED { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalSpeed", "System.Single")]
+           public partial System.Single ADDITIONAL_SPEED { get; set; } 
 */
 
             /// <summary>
@@ -157,9 +157,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("currentHP", "System.Single")]
-            public partial System.Single CURRENT_HP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("currentHP", "System.Single")]
+           public partial System.Single CURRENT_HP { get; set; } 
 */
 
             /// <summary>
@@ -167,9 +167,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalMaxHP", "System.Single")]
-            public partial System.Single ADDITIONAL_MAX_HP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalMaxHP", "System.Single")]
+           public partial System.Single ADDITIONAL_MAX_HP { get; set; } 
 */
 
             /// <summary>
@@ -177,9 +177,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("currentMP", "System.Single")]
-            public partial System.Single CURRENT_MP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("currentMP", "System.Single")]
+           public partial System.Single CURRENT_MP { get; set; } 
 */
 
             /// <summary>
@@ -187,9 +187,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalMaxMP", "System.Single")]
-            public partial System.Single ADDITIONAL_MAX_MP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("additionalMaxMP", "System.Single")]
+           public partial System.Single ADDITIONAL_MAX_MP { get; set; } 
 */
 
             /// <summary>
@@ -197,9 +197,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("actorId", "System.Int32")]
-            public partial System.Int32 ACTOR_ID { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("actorId", "System.Int32")]
+           public partial System.Int32 ACTOR_ID { get; set; } 
 */
 
             /// <summary>
@@ -207,9 +207,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."FloatReactiveProperty"]
             /// </summary>
             /// <returns>class UniRx.FloatReactiveProperty</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("exp", "UniRx.FloatReactiveProperty")]
-            public partial nint EXP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("exp", "UniRx.FloatReactiveProperty")]
+           public partial nint EXP { get; set; } 
 */
 
             /// <summary>
@@ -217,9 +217,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("expChangedValue", "System.Single")]
-            public partial System.Single EXP_CHANGED_VALUE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("expChangedValue", "System.Single")]
+           public partial System.Single EXP_CHANGED_VALUE { get; set; } 
 */
 
             /// <summary>
@@ -227,9 +227,9 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll"."Avatar"."AvatarData"]
             /// </summary>
             /// <returns>class Avatar.AvatarData</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("avatar", "Avatar.AvatarData")]
-            public partial nint AVATAR { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("avatar", "Avatar.AvatarData")]
+           public partial nint AVATAR { get; set; } 
 */
 
             /// <summary>
@@ -237,9 +237,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Boolean"]
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("alive", "System.Boolean")]
-            public partial System.Boolean ALIVE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("alive", "System.Boolean")]
+           public partial System.Boolean ALIVE { get; set; } 
 */
 
             /// <summary>
@@ -247,9 +247,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("homeId", "System.Int32")]
-            public partial System.Int32 HOME_ID { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("homeId", "System.Int32")]
+           public partial System.Int32 HOME_ID { get; set; } 
 */
 
             /// <summary>
@@ -257,9 +257,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("trustLevel", "System.Single")]
-            public partial System.Single TRUST_LEVEL { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("trustLevel", "System.Single")]
+           public partial System.Single TRUST_LEVEL { get; set; } 
 */
 
             /// <summary>
@@ -267,9 +267,9 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll"."Alchemy"."AlchemyPresenter"]
             /// </summary>
             /// <returns>class Alchemy.AlchemyPresenter</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("alchemyPresenter", "Alchemy.AlchemyPresenter")]
-            public partial nint ALCHEMY_PRESENTER { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("alchemyPresenter", "Alchemy.AlchemyPresenter")]
+           public partial nint ALCHEMY_PRESENTER { get; set; } 
 */
 
             /// <summary>
@@ -277,9 +277,9 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll"."Forge"."ForgePresenter"]
             /// </summary>
             /// <returns>class Forge.ForgePresenter</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("forgePresenter", "Forge.ForgePresenter")]
-            public partial nint FORGE_PRESENTER { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("forgePresenter", "Forge.ForgePresenter")]
+           public partial nint FORGE_PRESENTER { get; set; } 
 */
 
             /// <summary>
@@ -287,9 +287,9 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll"."Sect"."CharacterSectPresenter"]
             /// </summary>
             /// <returns>class Sect.CharacterSectPresenter</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("sectPresenter", "Sect.CharacterSectPresenter")]
-            public partial nint SECT_PRESENTER { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("sectPresenter", "Sect.CharacterSectPresenter")]
+           public partial nint SECT_PRESENTER { get; set; } 
 */
 
             /// <summary>
@@ -297,9 +297,9 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll"."Reputation"."CharacterReputationManager"]
             /// </summary>
             /// <returns>class Reputation.CharacterReputationManager</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("reputation", "Reputation.CharacterReputationManager")]
-            public partial nint REPUTATION { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("reputation", "Reputation.CharacterReputationManager")]
+           public partial nint REPUTATION { get; set; } 
 */
 
             /// <summary>
@@ -307,9 +307,9 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll".""."Personality"]
             /// </summary>
             /// <returns>class Personality</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("personality", "Personality")]
-            public partial nint PERSONALITY { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("personality", "Personality")]
+           public partial nint PERSONALITY { get; set; } 
 */
 
             /// <summary>
@@ -317,9 +317,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."BoolReactiveProperty"]
             /// </summary>
             /// <returns>class UniRx.BoolReactiveProperty</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("isMoving", "UniRx.BoolReactiveProperty")]
-            public partial nint IS_MOVING { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("isMoving", "UniRx.BoolReactiveProperty")]
+           public partial nint IS_MOVING { get; set; } 
 */
 
             /// <summary>
@@ -327,9 +327,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveCollection`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveCollection<System.Int32></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("spiritualRoots", "UniRx.ReactiveCollection<System.Int32>")]
-            public partial nint SPIRITUAL_ROOTS { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("spiritualRoots", "UniRx.ReactiveCollection<System.Int32>")]
+           public partial nint SPIRITUAL_ROOTS { get; set; } 
 */
 
             /// <summary>
@@ -337,9 +337,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveCollection`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveCollection<Skill.SkillSaveData></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("skills", "UniRx.ReactiveCollection<Skill.SkillSaveData>")]
-            public partial nint SKILLS { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("skills", "UniRx.ReactiveCollection<Skill.SkillSaveData>")]
+           public partial nint SKILLS { get; set; } 
 */
 
             /// <summary>
@@ -347,9 +347,9 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<Book.Bookmark></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("bookmarks", "System.Collections.Generic.List<Book.Bookmark>")]
-            public partial nint BOOKMARKS { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("bookmarks", "System.Collections.Generic.List<Book.Bookmark>")]
+           public partial nint BOOKMARKS { get; set; } 
 */
 
             /// <summary>
@@ -357,9 +357,9 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll"."DataAsset"."MonsterConfigData"]
             /// </summary>
             /// <returns>class DataAsset.MonsterConfigData</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("monsterData", "DataAsset.MonsterConfigData")]
-            public partial nint MONSTER_DATA { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("monsterData", "DataAsset.MonsterConfigData")]
+           public partial nint MONSTER_DATA { get; set; } 
 */
 
             /// <summary>
@@ -367,19 +367,19 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll"."Bag"."InventoryManager"]
             /// </summary>
             /// <returns>class Bag.InventoryManager</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("inventory", "Bag.InventoryManager")]
-            public partial nint INVENTORY { get; set; } 
-*/
+            public partial InventoryManager.Ptr_InventoryManager INVENTORY { get; set; }
+
 
             /// <summary>
             /// 0xE0 EquipmentSlot equipmentSlot
             /// class ["Assembly-CSharp.dll".""."EquipmentSlot"]
             /// </summary>
             /// <returns>class EquipmentSlot</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("equipmentSlot", "EquipmentSlot")]
-            public partial nint EQUIPMENT_SLOT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("equipmentSlot", "EquipmentSlot")]
+           public partial nint EQUIPMENT_SLOT { get; set; } 
 */
         }
 

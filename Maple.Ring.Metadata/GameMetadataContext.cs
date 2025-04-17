@@ -11,6 +11,11 @@ namespace Maple.Ring.Metadata
 
     [ContextMemberMetadata<I18nTextProvider>]
 
+    [ContextMemberMetadata<InventoryItemSet>]
+    [ContextMemberMetadata<InventoryManager>]
+
+
+
     [ContextMemberMetadata<DataAssetManager>]
     [ContextMemberMetadata<AlchemyGrowthConfigData>]
     [ContextMemberMetadata<AlchemyGrowthConfigDataManager>]
@@ -27,9 +32,17 @@ namespace Maple.Ring.Metadata
     [ContextMemberMetadata<CandidateInitSkillConfigData>]
     [ContextMemberMetadata<CandidateInitSkillConfigDataManager>]
     //   [ContextMemberMetadata<DataAssetManager>]
+    [ContextMemberMetadata<DictConfigData>]
+    [ContextMemberMetadata<DictConfigDataManager>]
+
+
     [ContextMemberMetadata<ElementConfigData>]
     [ContextMemberMetadata<ElementConfigDataManager>]
+
+    [ContextMemberMetadata<ElementRestraintConfigData>]
     [ContextMemberMetadata<ElementRestraintConfigDataManager>]
+
+
     [ContextMemberMetadata<EmotionConfigData>]
     [ContextMemberMetadata<EmotionConfigDataManager>]
     [ContextMemberMetadata<EquipmentConfigData>]

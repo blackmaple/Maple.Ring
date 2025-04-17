@@ -17,7 +17,7 @@ namespace Maple.Ring.Metadata
 
             public static implicit operator Ptr_ElementConfigData(System.IntPtr ptr) => new Ptr_ElementConfigData(ptr);
             public static implicit operator System.IntPtr(Ptr_ElementConfigData ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_ElementConfigData ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_ElementConfigData ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -30,19 +30,19 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("id", "System.Int32")]
-            public partial System.Int32 ID { get; set; } 
-*/
+            public partial System.Int32 ID { get; set; }
+
 
             /// <summary>
             /// 0x18 System.String title
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("title", "System.String")]
-            public partial nint TITLE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("title", "System.String")]
+           public partial nint TITLE { get; set; } 
 */
 
             /// <summary>
@@ -50,9 +50,9 @@ namespace Maple.Ring.Metadata
             /// struct ["UnityEngine.CoreModule.dll"."UnityEngine"."Color"]
             /// </summary>
             /// <returns>struct UnityEngine.Color</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("color", "UnityEngine.Color")]
-            public partial UnityEngine.Color COLOR { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("color", "UnityEngine.Color")]
+           public partial UnityEngine.Color COLOR { get; set; } 
 */
         }
 
@@ -65,18 +65,18 @@ namespace Maple.Ring.Metadata
             ///   System.Void .ctor()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void CTOR(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void CTOR(); 
 */
             /// <summary>
             ///   I18n.I18nTextProvider get_Title()
             /// </summary>
             /// <returns>class I18n.I18nTextProvider</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_Title", "I18n.I18nTextProvider", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_TITLE(); 
-*/
+            public partial I18nTextProvider.Ptr_I18nTextProvider GET_TITLE();
+
         }
     }
 }

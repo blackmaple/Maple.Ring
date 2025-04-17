@@ -1,32 +1,31 @@
 using Maple.MonoGameAssistant.MetadataCollections;
-using System.Data;
 
 namespace Maple.Ring.Metadata
 {
     /// <summary>
-    /// class ["Assembly-CSharp.dll"."DataAsset"."SkillConfigDataManager"]
-    /// [DataAsset.BaseConfigDataManager<DataAsset.SkillConfigData>]=>[UnityEngine.ScriptableObject]=>[UnityEngine.Object]=>[System.Object]
+    /// class ["Assembly-CSharp.dll"."DataAsset"."DictConfigDataManager"]
+    /// [DataAsset.BaseConfigDataManager<DataAsset.DictConfigData>]=>[UnityEngine.ScriptableObject]=>[UnityEngine.Object]=>[System.Object]
     /// </summary>
-    [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassParentMetadataAttribute<Maple.MonoGameAssistant.MetadataExtensions.MetadataCollector.ClassMetadataCollector<Ptr_SkillConfigDataManager>, Ptr_SkillConfigDataManager>]
-    [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassModelMetadataAttribute("Assembly-CSharp.dll", "DataAsset", "SkillConfigDataManager", "DataAsset.SkillConfigDataManager")]
-    public partial class SkillConfigDataManager
+    [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassParentMetadataAttribute<Maple.MonoGameAssistant.MetadataExtensions.MetadataCollector.ClassMetadataCollector<Ptr_DictConfigDataManager>, Ptr_DictConfigDataManager>]
+    [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassModelMetadataAttribute("Assembly-CSharp.dll", "DataAsset", "DictConfigDataManager", "DataAsset.DictConfigDataManager")]
+    public partial class DictConfigDataManager
     {
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-        public unsafe readonly partial struct Ptr_SkillConfigDataManager(System.IntPtr ptr) : Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.IPtrMetadata
+        public unsafe readonly partial struct Ptr_DictConfigDataManager(System.IntPtr ptr) : Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.IPtrMetadata
         {
             [System.Runtime.InteropServices.MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType.SysInt)]
             readonly System.IntPtr m_Pointer = ptr;
             public System.IntPtr Ptr => m_Pointer;
 
-            public static implicit operator Ptr_SkillConfigDataManager(System.IntPtr ptr) => new Ptr_SkillConfigDataManager(ptr);
-            public static implicit operator System.IntPtr(Ptr_SkillConfigDataManager ptr) => ptr.m_Pointer;
-            public static implicit operator bool(Ptr_SkillConfigDataManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator Ptr_DictConfigDataManager(System.IntPtr ptr) => new Ptr_DictConfigDataManager(ptr);
+            public static implicit operator System.IntPtr(Ptr_DictConfigDataManager ptr) => ptr.m_Pointer;
+            public static implicit operator bool(Ptr_DictConfigDataManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
-        /// class ["Assembly-CSharp.dll"."DataAsset"."SkillConfigDataManager"]
+        /// class ["Assembly-CSharp.dll"."DataAsset"."DictConfigDataManager"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_DictConfigDataManager
         {
             /// <summary>
             /// 0x0 System.String objectIsNullMessage
@@ -65,20 +64,20 @@ namespace Maple.Ring.Metadata
 */
 
             /// <summary>
-            /// 0x18 System.Collections.Generic.List<DataAsset.SkillConfigData> datas
+            /// 0x18 System.Collections.Generic.List<DataAsset.DictConfigData> datas
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
-            /// <returns>class System.Collections.Generic.List<DataAsset.SkillConfigData></returns>
+            /// <returns>class System.Collections.Generic.List<DataAsset.DictConfigData></returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("datas", "System.Collections.Generic.List<DataAsset.SkillConfigData>")]
-            public partial SysPtrList<SkillConfigData.Ptr_SkillConfigData> DATAS { get; set; }
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("datas", "System.Collections.Generic.List<DataAsset.DictConfigData>")]
+            public partial SysPtrList<DictConfigData.Ptr_DictConfigData> DATAS { get; set; }
 
         }
 
         /// <summary>
-        /// class ["Assembly-CSharp.dll"."DataAsset"."SkillConfigDataManager"]
+        /// class ["Assembly-CSharp.dll"."DataAsset"."DictConfigDataManager"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_DictConfigDataManager
         {
             /// <summary>
             ///   System.Void .ctor()
@@ -89,31 +88,23 @@ namespace Maple.Ring.Metadata
             public partial void CTOR(); 
 */
             /// <summary>
-            ///   DataAsset.SkillConfigData Get(System.Int32 id)
+            ///   System.String GetValue(DictIndex index, System.String key)
             /// </summary>
-            /// <param name = "id">struct System.Int32</param>
-            /// <returns>class DataAsset.SkillConfigData</returns>
+            /// <param name = "index">enum DictIndex</param>
+            /// <param name = "key">class System.String</param>
+            /// <returns>class System.String</returns>
              /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Get", "DataAsset.SkillConfigData", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
-            public partial nint GET(System.Int32 id); 
-*/
-            /// <summary>
-            ///   DataAsset.SkillConfigData GetNextLevelSkill(DataAsset.SkillConfigData skillConfig)
-            /// </summary>
-            /// <param name = "skillConfig">class DataAsset.SkillConfigData</param>
-            /// <returns>class DataAsset.SkillConfigData</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetNextLevelSkill", "DataAsset.SkillConfigData", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("DataAsset.SkillConfigData", 0)]
-            public partial nint GET_NEXT_LEVEL_SKILL(nint skillConfig); 
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetValue", "System.String", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("DictIndex", 0)]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+            public partial nint GET_VALUE(DictIndex index, nint key); 
 */
         }
 
         /// <summary>
         /// abstract class ["Assembly-CSharp.dll"."DataAsset"."BaseConfigDataManager`1"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_DictConfigDataManager
         {
             /// <summary>
             ///   System.Void .ctor()
@@ -128,7 +119,7 @@ namespace Maple.Ring.Metadata
         /// <summary>
         /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."ScriptableObject"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_DictConfigDataManager
         {
             /// <summary>
             /// static  UnityEngine.ScriptableObject CreateInstance(System.Type type)
@@ -183,7 +174,7 @@ namespace Maple.Ring.Metadata
         /// <summary>
         /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."Object"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_DictConfigDataManager
         {
             /// <summary>
             /// static  System.Void .cctor()

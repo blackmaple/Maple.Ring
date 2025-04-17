@@ -1,57 +1,54 @@
-using Maple.MonoGameAssistant.MetadataCollections;
-using System.Data;
-
 namespace Maple.Ring.Metadata
 {
     /// <summary>
-    /// class ["Assembly-CSharp.dll"."DataAsset"."SkillConfigDataManager"]
-    /// [DataAsset.BaseConfigDataManager<DataAsset.SkillConfigData>]=>[UnityEngine.ScriptableObject]=>[UnityEngine.Object]=>[System.Object]
+    /// class ["Assembly-CSharp.dll"."DataAsset"."ActorConfigDataManager"]
+    /// [DataAsset.BaseConfigDataManager<DataAsset.ActorConfigData>]=>[UnityEngine.ScriptableObject]=>[UnityEngine.Object]=>[System.Object]
     /// </summary>
-    [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassParentMetadataAttribute<Maple.MonoGameAssistant.MetadataExtensions.MetadataCollector.ClassMetadataCollector<Ptr_SkillConfigDataManager>, Ptr_SkillConfigDataManager>]
-    [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassModelMetadataAttribute("Assembly-CSharp.dll", "DataAsset", "SkillConfigDataManager", "DataAsset.SkillConfigDataManager")]
-    public partial class SkillConfigDataManager
+    [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassParentMetadataAttribute<Maple.MonoGameAssistant.MetadataExtensions.MetadataCollector.ClassMetadataCollector<Ptr_ActorConfigDataManager>, Ptr_ActorConfigDataManager>]
+    [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassModelMetadataAttribute("Assembly-CSharp.dll", "DataAsset", "ActorConfigDataManager", "DataAsset.ActorConfigDataManager")]
+    public partial class ActorConfigDataManager
     {
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-        public unsafe readonly partial struct Ptr_SkillConfigDataManager(System.IntPtr ptr) : Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.IPtrMetadata
+        public unsafe readonly partial struct Ptr_ActorConfigDataManager(System.IntPtr ptr) : Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.IPtrMetadata
         {
             [System.Runtime.InteropServices.MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType.SysInt)]
             readonly System.IntPtr m_Pointer = ptr;
             public System.IntPtr Ptr => m_Pointer;
 
-            public static implicit operator Ptr_SkillConfigDataManager(System.IntPtr ptr) => new Ptr_SkillConfigDataManager(ptr);
-            public static implicit operator System.IntPtr(Ptr_SkillConfigDataManager ptr) => ptr.m_Pointer;
-            public static implicit operator bool(Ptr_SkillConfigDataManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator Ptr_ActorConfigDataManager(System.IntPtr ptr) => new Ptr_ActorConfigDataManager(ptr);
+            public static implicit operator System.IntPtr(Ptr_ActorConfigDataManager ptr) => ptr.m_Pointer;
+            public static implicit operator bool (Ptr_ActorConfigDataManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
-        /// class ["Assembly-CSharp.dll"."DataAsset"."SkillConfigDataManager"]
+        /// class ["Assembly-CSharp.dll"."DataAsset"."ActorConfigDataManager"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_ActorConfigDataManager
         {
             /// <summary>
             /// 0x0 System.String objectIsNullMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-            /*
-           public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
+             /*
+            public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
 */
             /// <summary>
             /// 0x0 System.String cloneDestroyedMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-            /*
-           public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
+             /*
+            public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
 */
             /// <summary>
             /// 0x0 System.Int32 OffsetOfInstanceIDInCPlusPlusObject
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-            /*
-           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
-           public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
+             /*
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
+            public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
 */
 
             /// <summary>
@@ -59,26 +56,26 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."IntPtr"]
             /// </summary>
             /// <returns>struct System.IntPtr</returns>
-            /*
-           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
-           public partial System.IntPtr M_CACHED_PTR { get; set; } 
+             /*
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
+            public partial System.IntPtr M_CACHED_PTR { get; set; } 
 */
 
             /// <summary>
-            /// 0x18 System.Collections.Generic.List<DataAsset.SkillConfigData> datas
+            /// 0x18 System.Collections.Generic.List<DataAsset.ActorConfigData> datas
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
-            /// <returns>class System.Collections.Generic.List<DataAsset.SkillConfigData></returns>
-
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("datas", "System.Collections.Generic.List<DataAsset.SkillConfigData>")]
-            public partial SysPtrList<SkillConfigData.Ptr_SkillConfigData> DATAS { get; set; }
-
+            /// <returns>class System.Collections.Generic.List<DataAsset.ActorConfigData></returns>
+             /*
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("datas", "System.Collections.Generic.List<DataAsset.ActorConfigData>")]
+            public partial nint DATAS { get; set; } 
+*/
         }
 
         /// <summary>
-        /// class ["Assembly-CSharp.dll"."DataAsset"."SkillConfigDataManager"]
+        /// class ["Assembly-CSharp.dll"."DataAsset"."ActorConfigDataManager"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_ActorConfigDataManager
         {
             /// <summary>
             ///   System.Void .ctor()
@@ -89,31 +86,41 @@ namespace Maple.Ring.Metadata
             public partial void CTOR(); 
 */
             /// <summary>
-            ///   DataAsset.SkillConfigData Get(System.Int32 id)
+            ///   DataAsset.ActorConfigData Get(System.Int32 id)
             /// </summary>
             /// <param name = "id">struct System.Int32</param>
-            /// <returns>class DataAsset.SkillConfigData</returns>
+            /// <returns>class DataAsset.ActorConfigData</returns>
              /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Get", "DataAsset.SkillConfigData", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Get", "DataAsset.ActorConfigData", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
             public partial nint GET(System.Int32 id); 
 */
             /// <summary>
-            ///   DataAsset.SkillConfigData GetNextLevelSkill(DataAsset.SkillConfigData skillConfig)
+            ///   System.String GetActorId(System.String alias)
             /// </summary>
-            /// <param name = "skillConfig">class DataAsset.SkillConfigData</param>
-            /// <returns>class DataAsset.SkillConfigData</returns>
+            /// <param name = "alias">class System.String</param>
+            /// <returns>class System.String</returns>
              /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetNextLevelSkill", "DataAsset.SkillConfigData", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("DataAsset.SkillConfigData", 0)]
-            public partial nint GET_NEXT_LEVEL_SKILL(nint skillConfig); 
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetActorId", "System.String", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+            public partial nint GET_ACTOR_ID(nint alias); 
+*/
+            /// <summary>
+            ///   DataAsset.ActorConfigData GetByAlias(System.String alias)
+            /// </summary>
+            /// <param name = "alias">class System.String</param>
+            /// <returns>class DataAsset.ActorConfigData</returns>
+             /*
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetByAlias", "DataAsset.ActorConfigData", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+            public partial nint GET_BY_ALIAS(nint alias); 
 */
         }
 
         /// <summary>
         /// abstract class ["Assembly-CSharp.dll"."DataAsset"."BaseConfigDataManager`1"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_ActorConfigDataManager
         {
             /// <summary>
             ///   System.Void .ctor()
@@ -128,7 +135,7 @@ namespace Maple.Ring.Metadata
         /// <summary>
         /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."ScriptableObject"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_ActorConfigDataManager
         {
             /// <summary>
             /// static  UnityEngine.ScriptableObject CreateInstance(System.Type type)
@@ -183,7 +190,7 @@ namespace Maple.Ring.Metadata
         /// <summary>
         /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."Object"]
         /// </summary>
-        partial struct Ptr_SkillConfigDataManager
+        partial struct Ptr_ActorConfigDataManager
         {
             /// <summary>
             /// static  System.Void .cctor()
