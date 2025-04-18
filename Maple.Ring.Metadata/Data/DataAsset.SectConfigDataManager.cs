@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.MetadataCollections;
+
 namespace Maple.Ring.Metadata
 {
     /// <summary>
@@ -17,7 +19,7 @@ namespace Maple.Ring.Metadata
 
             public static implicit operator Ptr_SectConfigDataManager(System.IntPtr ptr) => new Ptr_SectConfigDataManager(ptr);
             public static implicit operator System.IntPtr(Ptr_SectConfigDataManager ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_SectConfigDataManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_SectConfigDataManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -30,33 +32,33 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            public const System.Int32 NO_SECT_ID = 0; 
+            /*
+           public const System.Int32 NO_SECT_ID = 0; 
 */
             /// <summary>
             /// 0x0 System.String objectIsNullMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
+            /*
+           public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
 */
             /// <summary>
             /// 0x0 System.String cloneDestroyedMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
+            /*
+           public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
 */
             /// <summary>
             /// 0x0 System.Int32 OffsetOfInstanceIDInCPlusPlusObject
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
-            public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
+           public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
 */
 
             /// <summary>
@@ -64,9 +66,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."IntPtr"]
             /// </summary>
             /// <returns>struct System.IntPtr</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
-            public partial System.IntPtr M_CACHED_PTR { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
+           public partial System.IntPtr M_CACHED_PTR { get; set; } 
 */
 
             /// <summary>
@@ -74,10 +76,10 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<DataAsset.SectConfigData></returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("datas", "System.Collections.Generic.List<DataAsset.SectConfigData>")]
-            public partial nint DATAS { get; set; } 
-*/
+            public partial SysPtrList<SectConfigData.Ptr_SectConfigData> DATAS { get; set; }
+
         }
 
         /// <summary>

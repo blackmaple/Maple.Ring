@@ -87,6 +87,9 @@ namespace Maple.Ring.Metadata
     [ContextMemberMetadata<CharacterName>]
 
     [ContextMemberMetadata<FloatReactiveProperty>]
+    [ContextMemberMetadata<IntReactiveProperty>]
+
+
     [ContextMemberMetadata<AvatarData>]
     [ContextMemberMetadata<AlchemyPresenter>]
     [ContextMemberMetadata<ForgePresenter>]

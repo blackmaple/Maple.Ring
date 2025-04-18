@@ -372,10 +372,10 @@ namespace Maple.Ring.Metadata
             /// static  DataAsset.SectConfigDataManager get_SectDatas()
             /// </summary>
             /// <returns>class DataAsset.SectConfigDataManager</returns>
-            /*
+       
            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_SectDatas", "DataAsset.SectConfigDataManager", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-           public static partial nint GET_SECT_DATAS(); 
-*/
+           public static partial SectConfigDataManager.Ptr_SectConfigDataManager GET_SECT_DATAS(); 
+ 
             /// <summary>
             /// static  Avatar.SingleAvatarManager get_SingleAvatarDatas()
             /// </summary>

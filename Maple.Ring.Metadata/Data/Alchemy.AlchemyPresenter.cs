@@ -18,7 +18,7 @@ namespace Maple.Ring.Metadata
 
             public static implicit operator Ptr_AlchemyPresenter(System.IntPtr ptr) => new Ptr_AlchemyPresenter(ptr);
             public static implicit operator System.IntPtr(Ptr_AlchemyPresenter ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_AlchemyPresenter ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_AlchemyPresenter ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -31,33 +31,33 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            public const System.Int32 EFFECT_SPIRITUAL_ROOT_ELEMENT_ID = 4; 
+            /*
+           public const System.Int32 EFFECT_SPIRITUAL_ROOT_ELEMENT_ID = 4; 
 */
             /// <summary>
             /// 0x0 System.String objectIsNullMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
+            /*
+           public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
 */
             /// <summary>
             /// 0x0 System.String cloneDestroyedMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
+            /*
+           public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
 */
             /// <summary>
             /// 0x0 System.Int32 OffsetOfInstanceIDInCPlusPlusObject
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
-            public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
+           public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
 */
 
             /// <summary>
@@ -65,9 +65,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."IntPtr"]
             /// </summary>
             /// <returns>struct System.IntPtr</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
-            public partial System.IntPtr M_CACHED_PTR { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
+           public partial System.IntPtr M_CACHED_PTR { get; set; } 
 */
 
             /// <summary>
@@ -75,9 +75,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveProperty<DataAsset.AlchemySkillConfigData></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("skillConfigData", "UniRx.ReactiveProperty<DataAsset.AlchemySkillConfigData>")]
-            public partial nint SKILL_CONFIG_DATA { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("skillConfigData", "UniRx.ReactiveProperty<DataAsset.AlchemySkillConfigData>")]
+           public partial nint SKILL_CONFIG_DATA { get; set; } 
 */
 
             /// <summary>
@@ -85,19 +85,19 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."IntReactiveProperty"]
             /// </summary>
             /// <returns>class UniRx.IntReactiveProperty</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("exp", "UniRx.IntReactiveProperty")]
-            public partial nint EXP { get; set; } 
-*/
+            public partial IntReactiveProperty.Ptr_IntReactiveProperty EXP { get; set; }
+
 
             /// <summary>
             /// 0x28 System.Collections.Generic.List<System.Int32> recipeItemIds
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<System.Int32></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("recipeItemIds", "System.Collections.Generic.List<System.Int32>")]
-            public partial nint RECIPE_ITEM_IDS { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("recipeItemIds", "System.Collections.Generic.List<System.Int32>")]
+           public partial nint RECIPE_ITEM_IDS { get; set; } 
 */
 
             /// <summary>
@@ -105,9 +105,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReadOnlyReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReadOnlyReactiveProperty<System.Int32></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<Level>k__BackingField", "UniRx.ReadOnlyReactiveProperty<System.Int32>")]
-            public partial nint LEVEL { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<Level>k__BackingField", "UniRx.ReadOnlyReactiveProperty<System.Int32>")]
+           public partial nint LEVEL { get; set; } 
 */
 
             /// <summary>
@@ -115,9 +115,9 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReadOnlyReactiveProperty`1"]
             /// </summary>
             /// <returns>class UniRx.ReadOnlyReactiveProperty<System.Int32></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Exp", "UniRx.ReadOnlyReactiveProperty<System.Int32>")]
-            public partial nint EXP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Exp", "UniRx.ReadOnlyReactiveProperty<System.Int32>")]
+           public partial nint EXP { get; set; } 
 */
 
             /// <summary>
@@ -125,9 +125,9 @@ namespace Maple.Ring.Metadata
             /// class ["Assembly-CSharp.dll".""."Character"]
             /// </summary>
             /// <returns>class Character</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("owner", "Character")]
-            public partial nint OWNER { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("owner", "Character")]
+           public partial nint OWNER { get; set; } 
 */
 
             /// <summary>
@@ -135,9 +135,9 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<System.Int32></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("newRecipeItemIds", "System.Collections.Generic.List<System.Int32>")]
-            public partial nint NEW_RECIPE_ITEM_IDS { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("newRecipeItemIds", "System.Collections.Generic.List<System.Int32>")]
+           public partial nint NEW_RECIPE_ITEM_IDS { get; set; } 
 */
         }
 

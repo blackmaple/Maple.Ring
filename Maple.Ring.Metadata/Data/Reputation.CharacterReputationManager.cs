@@ -18,7 +18,7 @@ namespace Maple.Ring.Metadata
 
             public static implicit operator Ptr_CharacterReputationManager(System.IntPtr ptr) => new Ptr_CharacterReputationManager(ptr);
             public static implicit operator System.IntPtr(Ptr_CharacterReputationManager ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_CharacterReputationManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_CharacterReputationManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -82,9 +82,9 @@ namespace Maple.Ring.Metadata
             ///   System.Void .ctor()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void CTOR(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void CTOR(); 
 */
             /// <summary>
             ///   System.Void ChangeSectReputation(System.Int32 sectId, System.Int32 change)
@@ -92,47 +92,47 @@ namespace Maple.Ring.Metadata
             /// <param name = "sectId">struct System.Int32</param>
             /// <param name = "change">struct System.Int32</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ChangeSectReputation", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 1)]
-            public partial void CHANGE_SECT_REPUTATION(System.Int32 sectId, System.Int32 change); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ChangeSectReputation", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 1)]
+           public partial void CHANGE_SECT_REPUTATION(System.Int32 sectId, System.Int32 change); 
 */
             /// <summary>
             ///   System.Int32 GetSectReputation(System.Int32 sectId)
             /// </summary>
             /// <param name = "sectId">struct System.Int32</param>
             /// <returns>struct System.Int32</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetSectReputation", "System.Int32", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
-            public partial System.Int32 GET_SECT_REPUTATION(System.Int32 sectId); 
-*/
+            public partial System.Int32 GET_SECT_REPUTATION(System.Int32 sectId);
+
             /// <summary>
             ///   System.Void Load(Save.ReputationSaveData data)
             /// </summary>
             /// <param name = "data">class Save.ReputationSaveData</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Load", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("Save.ReputationSaveData", 0)]
-            public partial void LOAD(nint data); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Load", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("Save.ReputationSaveData", 0)]
+           public partial void LOAD(nint data); 
 */
             /// <summary>
             ///   System.Void OnReset()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnReset", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void ON_RESET(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnReset", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void ON_RESET(); 
 */
             /// <summary>
             ///   Save.ReputationSaveData Save()
             /// </summary>
             /// <returns>class Save.ReputationSaveData</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Save", "Save.ReputationSaveData", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint SAVE(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Save", "Save.ReputationSaveData", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial nint SAVE(); 
 */
             /// <summary>
             ///   System.Void SetSectReputation(System.Int32 sectId, System.Int32 newValue)
@@ -140,12 +140,12 @@ namespace Maple.Ring.Metadata
             /// <param name = "sectId">struct System.Int32</param>
             /// <param name = "newValue">struct System.Int32</param>
             /// <returns>struct System.Void</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("SetSectReputation", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 1)]
-            public partial void SET_SECT_REPUTATION(System.Int32 sectId, System.Int32 newValue); 
-*/
+            public partial void SET_SECT_REPUTATION(System.Int32 sectId, System.Int32 newValue);
+
         }
 
         /// <summary>

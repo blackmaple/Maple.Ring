@@ -87,7 +87,12 @@ namespace Maple.Ring.Windows
         {
             var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
             return await this.MonoTaskAsync((p, c) => cheatengine.GetGameCharacters().ToArray(), cheatengine).ConfigureAwait(false);
+        }
 
+        public sealed override async ValueTask<GameCharacterStatusDTO> GetCharacterStatusAsync(GameCharacterObjectDTO characterObjectDTO)
+        {
+            var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
+            return await this.MonoTaskAsync((p, args) => args.cheatengine.GetGameCharacterStatus(args.characterObjectDTO), (cheatengine, characterObjectDTO)).ConfigureAwait(false);
         }
 
 

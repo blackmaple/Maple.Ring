@@ -18,7 +18,7 @@ namespace Maple.Ring.Metadata
 
             public static implicit operator Ptr_CharacterSectPresenter(System.IntPtr ptr) => new Ptr_CharacterSectPresenter(ptr);
             public static implicit operator System.IntPtr(Ptr_CharacterSectPresenter ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_CharacterSectPresenter ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_CharacterSectPresenter ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -92,95 +92,95 @@ namespace Maple.Ring.Metadata
             ///   System.Void .ctor()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void CTOR(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void CTOR(); 
 */
             /// <summary>
             ///   System.Boolean <Quit>b__10_0(Quest.QuestPresenter quest)
             /// </summary>
             /// <param name = "quest">class Quest.QuestPresenter</param>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("<Quit>b__10_0", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("Quest.QuestPresenter", 0)]
-            public partial System.Boolean QUITB__10_0(nint quest); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("<Quit>b__10_0", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("Quest.QuestPresenter", 0)]
+           public partial System.Boolean QUITB__10_0(nint quest); 
 */
             /// <summary>
             ///   System.Void Awake()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Awake", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void AWAKE(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Awake", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void AWAKE(); 
 */
             /// <summary>
             ///   System.Boolean get_HasSect()
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_HasSect", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial System.Boolean GET_HAS_SECT(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_HasSect", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial System.Boolean GET_HAS_SECT(); 
 */
             /// <summary>
             ///   System.Int32 get_SectId()
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_SectId", "System.Int32", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial System.Int32 GET_SECT_ID(); 
-*/
+            public partial System.Int32 GET_SECT_ID();
+
             /// <summary>
             ///   I18n.I18nTextProvider get_SectTitle()
             /// </summary>
             /// <returns>class I18n.I18nTextProvider</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_SectTitle", "I18n.I18nTextProvider", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_SECT_TITLE(); 
-*/
+            public partial I18nTextProvider.Ptr_I18nTextProvider GET_SECT_TITLE();
+
             /// <summary>
             ///   System.Void Join(System.Int32 sectId)
             /// </summary>
             /// <param name = "sectId">struct System.Int32</param>
             /// <returns>struct System.Void</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Join", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
-            public partial void JOIN(System.Int32 sectId); 
-*/
+            public partial void JOIN(System.Int32 sectId);
+
             /// <summary>
             ///   System.Void Load(System.Int32 data)
             /// </summary>
             /// <param name = "data">struct System.Int32</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Load", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
-            public partial void LOAD(System.Int32 data); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Load", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
+           public partial void LOAD(System.Int32 data); 
 */
             /// <summary>
             ///   System.Void OnReset()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnReset", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void ON_RESET(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnReset", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void ON_RESET(); 
 */
             /// <summary>
             ///   System.Void Quit()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Quit", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void QUIT(); 
-*/
+            public partial void QUIT();
+
             /// <summary>
             ///   System.Int32 Save()
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Save", "System.Int32", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial System.Int32 SAVE(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Save", "System.Int32", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial System.Int32 SAVE(); 
 */
         }
 

@@ -176,7 +176,7 @@ namespace Maple.Ring.Metadata
             /// <returns>struct System.Void</returns>
 
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_Value", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute(default(String), 0)]
+            //  [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute(default(String), 0)]
             public partial void SET_VALUE(T value);
 
             /// <summary>

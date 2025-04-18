@@ -1,5 +1,6 @@
 ﻿using Maple.MonoGameAssistant.Core;
 using Maple.MonoGameAssistant.MetadataCollections;
+using Maple.MonoGameAssistant.MetadataExtensions.MetadataCollector;
 using Maple.MonoGameAssistant.MetadataExtensions.MetadataCommon;
 
 namespace Maple.Ring.Metadata
@@ -46,9 +47,18 @@ namespace Maple.Ring.Metadata
         }
 
 
-        public void CLEAR() => this.LoadSelf<T>().CLEAR_ITEMS();
+        public void CLEAR() => this.LoadSelf().CLEAR_ITEMS();
 
-        public void ADD(T item) => this.LoadSelf<T>().ADD(item);
+        public void ADD(T item) => this.LoadSelf().ADD(item);
+
+        public IEnumerable<T> AsEnumerable()
+        {
+            return this.LoadSelf().ITEMS.AsEnumerable();
+
+
+        }
+
+        public int GetCount() => this.LoadSelf().GET_COUNT();
     }
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
