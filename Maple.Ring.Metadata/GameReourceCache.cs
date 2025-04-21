@@ -6,6 +6,7 @@ using Maple.MonoGameAssistant.MetadataExtensions.MetadataCollector;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace Maple.Ring.Metadata
 {
@@ -21,7 +22,7 @@ namespace Maple.Ring.Metadata
         public GameValueInfoDTOEX[] Elements { get; }
 
         public GameValueInfoDTO[] Sexs { get; }
-        public GameValueInfoDTO[] Sects { get; }
+        public GameValueInfoDTOEX[] Sects { get; }
 
         public Dictionary<string, GameValueInfoDTOEX[]> Personalities { get; }
 
@@ -49,6 +50,14 @@ namespace Maple.Ring.Metadata
                 {
                     yield break;
                 }
+
+                yield return   new GameValueInfoDTOEX()
+                {
+                    ObjectPointer =nint.Zero,
+                    ObjectId = "0",
+                    DisplayName = "散修",
+                    IntValue = 0,
+                };
                 foreach (var item in datas.DATAS.AsEnumerable())
                 {
                     var name = item.GET_TITLE().DOI18N().ToString();
