@@ -40,7 +40,6 @@ namespace Maple.Ring.Metadata
 
             };
         }
-
         public IEnumerable<GameCharacterDisplayDTO> GetGameCharacters()
         {
             var characterMgr = this.Ptr_CharacterManager;
@@ -62,7 +61,7 @@ namespace Maple.Ring.Metadata
             }
         }
 
-        private IEnumerable<GameSwitchDisplayDTO> GetGameCharacterStatusImp(Character.Ptr_Character ptr_Character)
+        IEnumerable<GameSwitchDisplayDTO> GetGameCharacterStatusImp(Character.Ptr_Character ptr_Character)
         {
 
             yield return new GameSwitchDisplayDTO() { ObjectId = nameof(Character.Ptr_Character.AGE), DisplayName = "属性*年龄", ContentValue = ptr_Character.AGE.ToString(), UIType = (int)EnumGameSwitchUIType.TextEditor };
@@ -143,9 +142,242 @@ namespace Maple.Ring.Metadata
 
         }
 
+        IEnumerable<GameSkillInfoDTO> GetGameCharacterSkillsImp(Character.Ptr_Character ptr_Character)
+        {
+
+            yield return new GameSkillInfoDTO() { ObjectId = string.Empty, DisplayName = string.Empty, DisplayCategory = nameof(SkillConfigData), DisplayDesc = string.Empty, DisplayImage = string.Empty, CanWrite = true };
+
+
+            var skillDatas = ptr_Character.SKILLS;
+            if (skillDatas.IsNull())
+            {
+                yield break;
+            }
+            foreach (var skill in skillDatas.AsEnumerable())
+            {
+                var findSkill = this.ReourceCache.Skills.FirstOrDefault(p => p.ObjectId == skill.ID.ToString());
+                if (findSkill is not null)
+                {
+                    yield return new GameSkillInfoDTO() { ObjectId = findSkill.ObjectId, DisplayName = findSkill.DisplayName, SkillAttributes = findSkill.SkillAttributes, DisplayCategory = findSkill.DisplayCategory, DisplayDesc = findSkill.DisplayDesc, DisplayImage = findSkill.DisplayImage, CanWrite = true };
+                }
+            }
+        }
+        public GameCharacterSkillDTO GetGameCharacterSkills(GameCharacterObjectDTO characterObjectDTO)
+        {
+            if (Enum.TryParse<Race>(characterObjectDTO.CharacterCategory, out var characterCategory))
+            {
+                var characterMgr = this.Ptr_CharacterManager;
+
+                var master = characterMgr.MASTER;
+                var masterCharacter = master.Value;
+                if (masterCharacter.IsNotNull() && masterCharacter.RACE == characterCategory)
+                {
+                    return new GameCharacterSkillDTO() { ObjectId = characterObjectDTO.CharacterId, SkillInfos = [.. GetGameCharacterSkillsImp(masterCharacter)] };
+                }
+                var player = characterMgr.PLAYER;
+                var playerCharacter = player.Value;
+                if (playerCharacter.IsNotNull() && playerCharacter.RACE == characterCategory)
+                {
+                    return new GameCharacterSkillDTO() { ObjectId = characterObjectDTO.CharacterId, SkillInfos = [.. GetGameCharacterSkillsImp(playerCharacter)] };
+                }
+            }
+            return GameException.Throw<GameCharacterSkillDTO>($"NOT FOUND:{characterObjectDTO.CharacterCategory}");
+
+        }
+        public GameCharacterSkillDTO UpdateGameCharacterSkills(GameCharacterModifyDTO characterModifyDTO)
+        {
+
+
+            if (Enum.TryParse<Race>(characterModifyDTO.CharacterCategory, out var characterCategory))
+            {
+
+                var remove = int.TryParse(characterModifyDTO.ModifyObject, out int oldSkill);
+                var add = int.TryParse(characterModifyDTO.NewValue, out int newSkill);
+
+                var characterMgr = this.Ptr_CharacterManager;
+
+                var master = characterMgr.MASTER;
+                var masterCharacter = master.Value;
+                if (masterCharacter.IsNotNull() && masterCharacter.RACE == characterCategory)
+                {
+                    UpdateSkill(masterCharacter, newSkill, oldSkill, add, remove);
+
+                    return new GameCharacterSkillDTO() { ObjectId = characterModifyDTO.CharacterId, SkillInfos = [.. GetGameCharacterSkillsImp(masterCharacter)] };
+                }
+                var player = characterMgr.PLAYER;
+                var playerCharacter = player.Value;
+                if (playerCharacter.IsNotNull() && playerCharacter.RACE == characterCategory)
+                {
+                    UpdateSkill(playerCharacter, newSkill, oldSkill, add, remove);
+
+                    return new GameCharacterSkillDTO() { ObjectId = characterModifyDTO.CharacterId, SkillInfos = [.. GetGameCharacterSkillsImp(playerCharacter)] };
+                }
+            }
+            return GameException.Throw<GameCharacterSkillDTO>($"NOT FOUND:{characterModifyDTO.CharacterCategory}");
+
+            static void UpdateSkill(Character.Ptr_Character ptr_Character, int newSkill, int oldSkill, bool add, bool remove)
+            {
+                if (remove && FindSaveSkillInfo(ptr_Character, oldSkill, out var _, out var index))
+                {
+                    ptr_Character.SKILLS.REMOVE(index);
+                }
+                if (add)
+                {
+                    ptr_Character.ADD_SKILL(newSkill);
+                }
+            }
+            static bool FindSaveSkillInfo(Character.Ptr_Character ptr_Character, int skillId, out SkillSaveData.Ptr_SkillSaveData ptr_SkillSaveData, out int index)
+            {
+                Unsafe.SkipInit(out ptr_SkillSaveData);
+                Unsafe.SkipInit(out index);
+                foreach (var skillInfo in ptr_Character.SKILLS.AsEnumerable().Index())
+                {
+                    if (skillInfo.Item.ID == skillId)
+                    {
+                        ptr_SkillSaveData = skillInfo.Item;
+                        index = skillInfo.Index;
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
 
 
 
+        static int GetGameInventoryInfoImp(Character.Ptr_Character ptr_Character, string code)
+        {
+            if (int.TryParse(code, out var itemId))
+            {
+                return ptr_Character.INVENTORY.GET_STOCK(itemId);
+
+            }
+            return default;
+        }
+
+        static int UpdateGameInventoryInfoImp(Character.Ptr_Character ptr_Character, string code, int newCount)
+        {
+            if (int.TryParse(code, out var itemId))
+            {
+                var oldCount = ptr_Character.INVENTORY.GET_STOCK(itemId);
+
+                var diff = newCount - oldCount;
+
+                if (diff >= 0)
+                {
+                    ptr_Character.INVENTORY.ADD_ITEM(itemId, diff);
+                }
+                else
+                {
+                    ptr_Character.INVENTORY.REMOVE_ITEM(itemId, Math.Abs(diff));
+                }
+
+
+
+
+            }
+            return GetGameInventoryInfoImp(ptr_Character, code);
+        }
+
+        public GameCurrencyInfoDTO GetGameCurrencyInfo(GameCurrencyObjectDTO currencyInfoDTO)
+        {
+            var characterMgr = this.Ptr_CharacterManager;
+
+            //var player = characterMgr.PLAYER;
+            //var ptr_Player = player.Value;
+            //if (player.IsNotNull() && ptr_Player.IsNotNull())
+            //{
+            //    this.Logger.LogInformation("player-item:{p}", ptr_Player.INVENTORY.Ptr.ToString("X8"));
+            //}
+
+            var master = characterMgr.MASTER;
+            var ptr_Master = master.Value;
+            if (ptr_Master.IsNotNull())
+            {
+                return new GameCurrencyInfoDTO()
+                {
+                    ObjectId = currencyInfoDTO.CurrencyObject,
+                    Currency = GetGameInventoryInfoImp(ptr_Master, currencyInfoDTO.CurrencyObject)
+                };
+            }
+
+
+
+
+            return GameException.Throw<GameCurrencyInfoDTO>($"ERROR:{currencyInfoDTO.CurrencyObject}");
+
+        }
+        public GameCurrencyInfoDTO UpdateGameCurrencyInfo(GameCurrencyModifyDTO currencyModifyDTO)
+        {
+            var characterMgr = this.Ptr_CharacterManager;
+
+            //var player = characterMgr.PLAYER;
+            //var ptr_Player = player.Value;
+            //if (player.IsNotNull() && ptr_Player.IsNotNull())
+            //{
+            //    this.Logger.LogInformation("player-item:{p}", ptr_Player.INVENTORY.Ptr.ToString("X8"));
+            //}
+
+            var master = characterMgr.MASTER;
+            var ptr_Master = master.Value;
+            if (ptr_Master.IsNotNull())
+            {
+                var count = UpdateGameInventoryInfoImp(ptr_Master, currencyModifyDTO.CurrencyObject, currencyModifyDTO.IntValue);
+                return new GameCurrencyInfoDTO() { ObjectId = currencyModifyDTO.CurrencyObject, Currency = count };
+            }
+
+
+
+            return GameException.Throw<GameCurrencyInfoDTO>($"ERROR:{currencyModifyDTO.CurrencyObject}");
+
+        }
+
+
+        public GameInventoryInfoDTO GetGameInventoryInfo(GameInventoryObjectDTO inventoryObjectDTO)
+        {
+            var characterMgr = this.Ptr_CharacterManager;
+
+            //var player = characterMgr.PLAYER;
+            //var ptr_Player = player.Value;
+            //if (player.IsNotNull() && ptr_Player.IsNotNull())
+            //{
+            //    this.Logger.LogInformation("player-item:{p}", ptr_Player.INVENTORY.Ptr.ToString("X8"));
+            //}
+
+            var master = characterMgr.MASTER;
+            var ptr_Master = master.Value;
+            if (ptr_Master.IsNotNull())
+            {
+                return new GameInventoryInfoDTO()
+                {
+                    ObjectId = inventoryObjectDTO.InventoryObject,
+                    InventoryCount = GetGameInventoryInfoImp(ptr_Master, inventoryObjectDTO.InventoryObject)
+                };
+            }
+            return GameException.Throw<GameInventoryInfoDTO>($"ERROR:{inventoryObjectDTO.InventoryObject}");
+
+        }
+        public GameInventoryInfoDTO UpdateGameInventoryInfo(GameInventoryModifyDTO inventoryModifyDTO)
+        {
+            var characterMgr = this.Ptr_CharacterManager;
+
+            //var player = characterMgr.PLAYER;
+            //var ptr_Player = player.Value;
+            //if (player.IsNotNull() && ptr_Player.IsNotNull())
+            //{
+            //    this.Logger.LogInformation("player-item:{p}", ptr_Player.INVENTORY.Ptr.ToString("X8"));
+            //}
+
+            var master = characterMgr.MASTER;
+            var ptr_Master = master.Value;
+            if (ptr_Master.IsNotNull())
+            {
+                var count = UpdateGameInventoryInfoImp(ptr_Master, inventoryModifyDTO.InventoryObject, inventoryModifyDTO.InventoryCount);
+                return new GameInventoryInfoDTO() { ObjectId = inventoryModifyDTO.InventoryObject, InventoryCount = count };
+            }
+            return GameException.Throw<GameInventoryInfoDTO>($"ERROR:{inventoryModifyDTO.InventoryObject}");
+
+        }
 
 
 

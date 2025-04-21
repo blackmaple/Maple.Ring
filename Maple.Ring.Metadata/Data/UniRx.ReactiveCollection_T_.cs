@@ -298,11 +298,11 @@ namespace Maple.Ring.Metadata
             /// </summary>
             /// <param name = "index">struct System.Int32</param>
             /// <returns>struct System.Void</returns>
-            /*
-           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("RemoveItem", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
-           public partial void REMOVE_ITEM(System.Int32 index); 
-*/
+
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("RemoveItem", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
+            public partial void REMOVE_ITEM(System.Int32 index);
+
             /// <summary>
             ///   System.Void SetItem(System.Int32 index, T item)
             /// </summary>

@@ -51,6 +51,8 @@ namespace Maple.Ring.Metadata
 
         public void ADD(T item) => this.LoadSelf().ADD(item);
 
+        public void REMOVE(int index) => this.LoadSelf().REMOVE_ITEM(index);
+
         public IEnumerable<T> AsEnumerable()
         {
             return this.LoadSelf().ITEMS.AsEnumerable();
@@ -58,7 +60,9 @@ namespace Maple.Ring.Metadata
 
         }
 
-        public int GetCount() => this.LoadSelf().GET_COUNT();
+
+
+        //  public int GetCount() => this.LoadSelf().GET_COUNT();
     }
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]

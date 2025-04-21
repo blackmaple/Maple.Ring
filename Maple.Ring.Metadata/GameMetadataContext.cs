@@ -97,6 +97,8 @@ namespace Maple.Ring.Metadata
     [ContextMemberMetadata<CharacterReputationManager>]
     [ContextMemberMetadata<Personality>]
 
+    [ContextMemberMetadata<SkillSaveData>]
+
     public partial class GameMetadataContext
     {
 

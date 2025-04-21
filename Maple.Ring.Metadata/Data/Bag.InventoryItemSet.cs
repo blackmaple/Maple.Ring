@@ -30,20 +30,20 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("itemId", "System.Int32")]
             public partial System.Int32 ITEM_ID { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x18 UniRx.IntReactiveProperty count
             /// class ["UniRx.dll"."UniRx"."IntReactiveProperty"]
             /// </summary>
             /// <returns>class UniRx.IntReactiveProperty</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("count", "UniRx.IntReactiveProperty")]
-            public partial nint COUNT { get; set; } 
-*/
+            public partial IntReactiveProperty.Ptr_IntReactiveProperty COUNT { get; set; } 
+
 
             /// <summary>
             /// 0x20 DataAsset.ItemConfigData _data

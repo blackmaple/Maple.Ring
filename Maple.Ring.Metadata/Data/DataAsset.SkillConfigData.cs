@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.MetadataCollections;
+
 namespace Maple.Ring.Metadata
 {
     /// <summary>
@@ -100,10 +102,10 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-            /*
-           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("level", "System.Int32")]
-           public partial System.Int32 LEVEL { get; set; } 
-*/
+
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("level", "System.Int32")]
+            public partial System.Int32 LEVEL { get; set; }
+
 
             /// <summary>
             /// 0x48 System.Int32 nextLevelExp
@@ -150,10 +152,10 @@ namespace Maple.Ring.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<SkillType></returns>
-            /*
-           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("types", "System.Collections.Generic.List<SkillType>")]
-           public partial nint TYPES { get; set; } 
-*/
+
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("types", "System.Collections.Generic.List<SkillType>")]
+            public partial SysPtrList<SkillType> TYPES { get; set; }
+
 
             /// <summary>
             /// 0x70 System.Int32 totalTimes

@@ -31,9 +31,9 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             public const System.Int32 MAX_STOCK_COUNT = 99999999; 
-*/
+ 
             /// <summary>
             /// 0x0 System.String objectIsNullMessage
             /// class ["mscorlib.dll"."System"."String"]
@@ -75,10 +75,10 @@ namespace Maple.Ring.Metadata
             /// class ["UniRx.dll"."UniRx"."ReactiveCollection`1"]
             /// </summary>
             /// <returns>class UniRx.ReactiveCollection<Bag.InventoryItemSet></returns>
-             /*
+           
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Items", "UniRx.ReactiveCollection<Bag.InventoryItemSet>")]
-            public partial nint ITEMS { get; set; } 
-*/
+            public partial PtrReactiveCollection<InventoryItemSet.Ptr_InventoryItemSet> ITEMS { get; set; } 
+ 
         }
 
         /// <summary>
@@ -184,12 +184,12 @@ namespace Maple.Ring.Metadata
             /// <param name = "itemId">struct System.Int32</param>
             /// <param name = "count">struct System.Int32</param>
             /// <returns>struct System.Void</returns>
-            /*
+         
            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("RemoveItem", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 0)]
            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 1)]
            public partial void REMOVE_ITEM(System.Int32 itemId, System.Int32 count); 
-*/
+
             /// <summary>
             ///   System.Collections.Generic.List<Save.ItemSaveData> Save()
             /// </summary>

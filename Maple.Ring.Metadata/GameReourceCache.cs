@@ -15,6 +15,7 @@ namespace Maple.Ring.Metadata
         public GameMetadataContext MetadataContext { get; }
         ILogger Logger => this.MetadataContext.Logger;
 
+        public GameCurrencyDisplayDTOEX[] Money { get; }
         public GameInventoryDisplayDTOEX[] Items { get; }
         public GameSkillDisplayDTOEX[] Skills { get; }
         public GameMonsterDisplayDTOEX[] Monsters { get; }
@@ -29,7 +30,7 @@ namespace Maple.Ring.Metadata
         public GameReourceCache(GameMetadataContext metadataContext)
         {
             this.MetadataContext = metadataContext;
-
+            this.Money = [.. LoadMoneyData()];
             this.Items = [.. LoadItemDatas()];
             this.Skills = [.. LoadSkillDatas()];
             this.Monsters = [.. LoadMonsterDatas()];
@@ -41,6 +42,40 @@ namespace Maple.Ring.Metadata
             this.Personalities = LoadPersonalityDatas().GroupBy(p => p.ObjectId).ToDictionary(p => p.Key, p => p.ToArray());
         }
 
+
+        IEnumerable<GameCurrencyDisplayDTOEX> LoadMoneyData()
+        {
+            using (this.Logger.Running())
+            {
+                var datas = DataAssetManager.Ptr_DataAssetManager.GET_ITEM_DATAS();
+                if (datas.IsNull())
+                {
+                    yield break;
+                }
+                foreach (var item in datas.DATAS.AsEnumerable())
+                {
+                    var type = item.GET_TYPE();
+                    if (type != ItemType.Money)
+                    {
+                        continue;
+                    }
+                    var dto = new GameCurrencyDisplayDTOEX()
+                    {
+                        ObjectPointer = item.Ptr,
+                        ObjectId = item.ID.ToString(),
+                        DisplayName = item.GET_TITLE().DOI18N().ToString(),
+                        DisplayDesc = item.GET_DESCRIPTION().DOI18N().ToString(),
+                        DisplayCategory = type.ToString(),
+                    };
+                    this.Logger.LogInformation("id:{id}/name:{name}/desc:{desc}/type:{t}", dto.ObjectId, dto.DisplayName, dto.DisplayDesc, dto.DisplayCategory);
+                    yield return dto;
+                }
+
+            }
+
+        }
+
+
         IEnumerable<GameValueInfoDTOEX> LoadSectConfigData()
         {
             using (this.Logger.Running())
@@ -51,9 +86,9 @@ namespace Maple.Ring.Metadata
                     yield break;
                 }
 
-                yield return   new GameValueInfoDTOEX()
+                yield return new GameValueInfoDTOEX()
                 {
-                    ObjectPointer =nint.Zero,
+                    ObjectPointer = nint.Zero,
                     ObjectId = "0",
                     DisplayName = "散修",
                     IntValue = 0,
@@ -131,9 +166,10 @@ namespace Maple.Ring.Metadata
                     {
                         ObjectPointer = item.Ptr,
                         ObjectId = item.ID.ToString(),
-                        DisplayName = item.GET_TITLE().DOI18N().ToString(),
+                        DisplayName = $"{item.GET_TITLE().DOI18N()}.lv{item.LEVEL}",
                         DisplayDesc = item.GET_DESCRIPTION().DOI18N().ToString(),
-                        //   DisplayCategory = item.GET_TYPE().ToString(),
+                        SkillAttributes = [.. item.TYPES.AsEnumerable().Select(p => new GameValueInfoDTO() { ObjectId = p.ToString(), DisplayName = p.ToString(), DisplayValue = p.ToString() })],
+                        DisplayCategory = nameof(SkillConfigData)
                     };
                     this.Logger.LogInformation("id:{id}/name:{name}/desc:{desc}/type:{t}", dto.ObjectId, dto.DisplayName, dto.DisplayDesc, dto.DisplayCategory);
                     yield return dto;
@@ -275,7 +311,11 @@ namespace Maple.Ring.Metadata
 
     }
 
+    public class GameCurrencyDisplayDTOEX : GameCurrencyDisplayDTO
+    {
+        public nint ObjectPointer { get; set; }
 
+    }
 
 
 

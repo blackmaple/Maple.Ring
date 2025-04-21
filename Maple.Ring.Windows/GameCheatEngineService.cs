@@ -3,6 +3,7 @@ using Maple.MonoGameAssistant.GameDTO;
 using Maple.MonoGameAssistant.Model;
 using Maple.MonoGameAssistant.Windows.HotKey.HookWindowMessage;
 using Maple.MonoGameAssistant.Windows.Service;
+using Maple.MonoGameAssistant.Windows.UITask;
 using Maple.Ring.Metadata;
 using Microsoft.Extensions.Logging;
 using System;
@@ -88,18 +89,55 @@ namespace Maple.Ring.Windows
             var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
             return await this.MonoTaskAsync((p, c) => cheatengine.GetGameCharacters().ToArray(), cheatengine).ConfigureAwait(false);
         }
-
         public sealed override async ValueTask<GameCharacterStatusDTO> GetCharacterStatusAsync(GameCharacterObjectDTO characterObjectDTO)
         {
             var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
             return await this.MonoTaskAsync((p, args) => args.cheatengine.GetGameCharacterStatus(args.characterObjectDTO), (cheatengine, characterObjectDTO)).ConfigureAwait(false);
         }
 
+        public sealed override async ValueTask<GameCharacterSkillDTO> GetCharacterSkillAsync(GameCharacterObjectDTO characterObjectDTO)
+        {
+            var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
+            return await this.MonoTaskAsync((p, args) => args.cheatengine.GetGameCharacterSkills(args.characterObjectDTO), (cheatengine, characterObjectDTO)).ConfigureAwait(false);
+        }
+        public sealed override async ValueTask<GameCharacterSkillDTO> UpdateCharacterSkillAsync(GameCharacterModifyDTO characterModifyDTO)
+        {
+            var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
+            return await this.UITaskAsync((p, args) => args.cheatengine.UpdateGameCharacterSkills(args.characterModifyDTO), (cheatengine, characterModifyDTO)).ConfigureAwait(false);
+        }
+
+
+        public sealed override ValueTask<GameCurrencyDisplayDTO[]> GetListCurrencyDisplayAsync()
+        {
+            return new ValueTask<GameCurrencyDisplayDTO[]>(this.Cache.Money);
+        }
+        public sealed override async ValueTask<GameCurrencyInfoDTO> GetCurrencyInfoAsync(GameCurrencyObjectDTO currencyObjectDTO)
+        {
+            var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
+            return await this.MonoTaskAsync((p, args) => args.cheatengine.GetGameCurrencyInfo(args.currencyObjectDTO), (cheatengine, currencyObjectDTO)).ConfigureAwait(false);
+        }
+        public sealed override async ValueTask<GameCurrencyInfoDTO> UpdateCurrencyInfoAsync(GameCurrencyModifyDTO currencyModifyDTO)
+        {
+            var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
+            return await this.MonoTaskAsync((p, args) => args.cheatengine.UpdateGameCurrencyInfo(args.currencyModifyDTO), (cheatengine, currencyModifyDTO)).ConfigureAwait(false);
+        }
 
         public sealed override ValueTask<GameInventoryDisplayDTO[]> GetListInventoryDisplayAsync()
         {
             return new ValueTask<GameInventoryDisplayDTO[]>(this.Cache.Items);
         }
+        public sealed override async ValueTask<GameInventoryInfoDTO> GetInventoryInfoAsync(GameInventoryObjectDTO inventoryObjectDTO)
+        {
+            var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
+            return await this.MonoTaskAsync((p, args) => args.cheatengine.GetGameInventoryInfo(args.inventoryObjectDTO), (cheatengine, inventoryObjectDTO)).ConfigureAwait(false);
+        }
+        public sealed override async ValueTask<GameInventoryInfoDTO> UpdateInventoryInfoAsync(GameInventoryModifyDTO inventoryObjectDTO)
+        {
+            var cheatengine = await this.GetGameCheatEngineThrowIfNotInGame().ConfigureAwait(false);
+            return await this.MonoTaskAsync((p, args) => args.cheatengine.UpdateGameInventoryInfo(args.inventoryObjectDTO), (cheatengine, inventoryObjectDTO)).ConfigureAwait(false);
+        }
+
+
         public sealed override ValueTask<GameMonsterDisplayDTO[]> GetListMonsterDisplayAsync()
         {
             return new ValueTask<GameMonsterDisplayDTO[]>(this.Cache.Monsters);

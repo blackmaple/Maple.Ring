@@ -14,7 +14,7 @@ namespace Maple.Ring.Windows
         {
             var webapp = WebApiServiceExtensions.AsRunWebApiService(p =>
             {
-                p.GameName = "萧炎你在哪里?";
+                p.GameName = "萧炎,药老被魂殿抓走了!";
                 p.QQ = "0";
                 p.Http = true;
                 p.NamedPipe = true;
