@@ -122,20 +122,20 @@ namespace Maple.Ring.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("buyPrice", "System.Int32")]
             public partial System.Int32 BUY_PRICE { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x48 System.Int32 sellPrice
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("sellPrice", "System.Int32")]
             public partial System.Int32 SELL_PRICE { get; set; } 
-*/
+
         }
 
         /// <summary>

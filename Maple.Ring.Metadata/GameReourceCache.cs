@@ -143,6 +143,10 @@ namespace Maple.Ring.Metadata
                         DisplayName = item.GET_TITLE().DOI18N().ToString(),
                         DisplayDesc = item.GET_DESCRIPTION().DOI18N().ToString(),
                         DisplayCategory = item.GET_TYPE().ToString(),
+                        ItemAttributes = [
+                                new GameValueInfoDTO(){ ObjectId = nameof(item.BUY_PRICE),DisplayName = "购价",IntValue = item.BUY_PRICE ,CanPreview = true},
+                                new GameValueInfoDTO(){ ObjectId = nameof(item.SELL_PRICE),DisplayName = "售价",IntValue = item.SELL_PRICE,CanPreview = true }
+                            ]
                     };
                     this.Logger.LogInformation("id:{id}/name:{name}/desc:{desc}/type:{t}", dto.ObjectId, dto.DisplayName, dto.DisplayDesc, dto.DisplayCategory);
                     yield return dto;
@@ -168,7 +172,7 @@ namespace Maple.Ring.Metadata
                         ObjectId = item.ID.ToString(),
                         DisplayName = $"{item.GET_TITLE().DOI18N()}.lv{item.LEVEL}",
                         DisplayDesc = item.GET_DESCRIPTION().DOI18N().ToString(),
-                        SkillAttributes = [.. item.TYPES.AsEnumerable().Select(p => new GameValueInfoDTO() { ObjectId = p.ToString(), DisplayName = p.ToString(), DisplayValue = p.ToString() })],
+                        SkillAttributes = [.. item.TYPES.AsEnumerable().Select(p => new GameValueInfoDTO() { ObjectId = p.ToString(), DisplayName = p.ToString(), DisplayValue = p.ToString() ,CanPreview =true})],
                         DisplayCategory = nameof(SkillConfigData)
                     };
                     this.Logger.LogInformation("id:{id}/name:{name}/desc:{desc}/type:{t}", dto.ObjectId, dto.DisplayName, dto.DisplayDesc, dto.DisplayCategory);
@@ -197,6 +201,7 @@ namespace Maple.Ring.Metadata
                         ObjectId = item.ID.ToString(),
                         DisplayName = item.GET_NAME().DOI18N().ToString(),
                         DisplayDesc = item.GET_ELEMENT().GET_TITLE().DOI18N().ToString(),
+                        DisplayCategory = nameof(MonsterConfigData)
                         //   DisplayCategory = item.GET_TYPE().ToString(),
                     };
                     this.Logger.LogInformation("id:{id}/name:{name}/desc:{desc}/type:{t}", dto.ObjectId, dto.DisplayName, dto.DisplayDesc, dto.DisplayCategory);
